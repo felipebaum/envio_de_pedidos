@@ -9,11 +9,11 @@ def janela_login():
         [sg.Text('Senha'), sg.Input(key='senha', password_char='*', )],
         [sg.Button('Entrar')]
     ]
+    janela =sg.Window('Teste', layout, size=(300,400))
+janela_login()
 
-
-janela = sg.Window('Teste')
 while True:
-    eventos, valores = janela_login.read()
+    eventos, valores = janela.Read()
     if eventos == sg.WINDOW_CLOSED:
         break
     if eventos == 'Entrar':
